@@ -1,11 +1,12 @@
 ﻿var config = {
     type: Phaser.AUTO,
     // pixel size * tile map size * zoom 
-    width: 32 * 22,
-    height: 32 * 20,
+    width: 32 * 20, //640
+    height: 32 * 15, //480
     physics: {
         default: 'arcade',
         arcade: {
+            gravity: { y: 300 },
             debug: true
         }
     },
@@ -15,7 +16,7 @@
     },
     backgroundColor: '000000',
     pixelArt: true,
-    scene: [level1, level2, level3]
+    scene: [titleScreen, storyline, menu, level1, level2, level3, gameOver]
 };
 
 var game = new Phaser.Game(config);
