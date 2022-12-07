@@ -314,7 +314,7 @@ class level1 extends Phaser.Scene {
 
     this.physics.add.overlap(
       this.player,
-      this.e1,
+      this.enemy1,
       this.hitEnemy,
       null,
       this
@@ -324,7 +324,7 @@ class level1 extends Phaser.Scene {
 
     this.physics.add.overlap(
       this.player,
-      this.e3,
+      this.enemy3,
       this.hitEnemy,
       null,
       this

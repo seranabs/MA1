@@ -609,7 +609,7 @@ class level2 extends Phaser.Scene {
     moveRightLeft1() {
       // console.log("moveRightLeft");
       this.tweens.timeline({
-        targets: this.e1,
+        targets: this.enemy1,
         loop: -1, // loop forever
         ease: "Linear",
         duration: 3000,
@@ -627,7 +627,7 @@ class level2 extends Phaser.Scene {
   moveRightLeft2() {
     // console.log("moveRightLeft");
     this.tweens.timeline({
-      targets: this.e3,
+      targets: this.enemy3,
       loop: -1, // loop forever
       ease: "Linear",
       duration: 3000,
@@ -645,7 +645,7 @@ class level2 extends Phaser.Scene {
 moveRightLeft3() {
   // console.log("moveRightLeft");
   this.tweens.timeline({
-    targets: this.e4,
+    targets: this.enemy4,
     loop: -1, // loop forever
     ease: "Linear",
     duration: 3000,
@@ -663,7 +663,7 @@ moveRightLeft3() {
 moveRightLeft4() {
   // console.log("moveRightLeft");
   this.tweens.timeline({
-    targets: this.e5,
+    targets: this.enemy5,
     loop: -1, // loop forever
     ease: "Linear",
     duration: 3000,
