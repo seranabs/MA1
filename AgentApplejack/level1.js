@@ -313,8 +313,7 @@ class level1 extends Phaser.Scene {
     // );
 
     this.physics.add.overlap(
-      this.player,
-      this.enemy1,
+      this.player, [this.enemy1, this.enemy2, this.enemy3],
       this.hitEnemy,
       null,
       this
@@ -322,13 +321,13 @@ class level1 extends Phaser.Scene {
 
     
 
-    this.physics.add.overlap(
-      this.player,
-      this.enemy3,
-      this.hitEnemy,
-      null,
-      this
-    );
+    // this.physics.add.overlap(
+    //   this.player,
+    //   this.enemy3,
+    //   this.hitEnemy,
+    //   null,
+    //   this
+    // );
 
     // this.physics.add.overlap(
     //   this.player,
@@ -524,13 +523,13 @@ class level1 extends Phaser.Scene {
       targets: this.enemy1,
       loop: -1, // loop forever
       ease: "Linear",
-      duration: 3000,
+      duration: 10000,
       tweens: [
         {
-          x: 500,
+          x: 900,
         },
         {
-          x: 299,
+          x: 150,
         },
       ],
     });
@@ -545,10 +544,10 @@ moveLeftRight() {
     duration: 3000,
     tweens: [
       {
-        x: 620,
+        x: 400,
       },
       {
-        x: 870,
+        x: 900,
       },
     ],
   });

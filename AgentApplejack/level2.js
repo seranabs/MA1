@@ -435,7 +435,7 @@ class level2 extends Phaser.Scene {
       //this.physics.add.collider(mathis.player, this.this.player);
   
       this.physics.add.overlap(
-        this.player, [this.e1, this.e3, this.e4, this.e5],
+        this.player, [this.enemy1, this.enemy3, this.enemy4, this.enemy5],
         this.hitEnemy,
         null,
         this
@@ -612,13 +612,13 @@ class level2 extends Phaser.Scene {
         targets: this.enemy1,
         loop: -1, // loop forever
         ease: "Linear",
-        duration: 3000,
+        duration: 10000,
         tweens: [
           {
             x: 1000,
           },
           {
-            x: 0,
+            x: 200,
           },
         ],
       });
@@ -630,13 +630,13 @@ class level2 extends Phaser.Scene {
       targets: this.enemy3,
       loop: -1, // loop forever
       ease: "Linear",
-      duration: 3000,
+      duration: 9000,
       tweens: [
         {
           x: 850,
         },
         {
-          x: 100,
+          x: 200,
         },
       ],
     });
@@ -648,13 +648,13 @@ moveRightLeft3() {
     targets: this.enemy4,
     loop: -1, // loop forever
     ease: "Linear",
-    duration: 3000,
+    duration: 9000,
     tweens: [
       {
-        x: 700,
+        x: 800,
       },
       {
-        x: 550,
+        x: 200,
       },
     ],
   });
@@ -666,13 +666,13 @@ moveRightLeft4() {
     targets: this.enemy5,
     loop: -1, // loop forever
     ease: "Linear",
-    duration: 3000,
+    duration: 5000,
     tweens: [
       {
-        x: 1000,
+        x: 900,
       },
       {
-        x: 300,
+        x: 587,
       },
     ],
   });

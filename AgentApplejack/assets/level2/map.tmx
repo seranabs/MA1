@@ -615,7 +615,7 @@
   <object id="1" name="start" x="50.1021" y="182.78">
    <point/>
   </object>
-  <object id="2" name="e1" x="860" y="525">
+  <object id="2" name="e1" x="200" y="525">
    <point/>
   </object>
   <object id="3" name="cctv1" x="1050" y="540">
@@ -624,10 +624,10 @@
   <object id="5" name="cctv2" x="550" y="540">
    <point/>
   </object>
-  <object id="6" name="e3" x="815" y="1140">
+  <object id="6" name="e3" x="200" y="1140">
    <point/>
   </object>
-  <object id="7" name="e4" x="587" y="1510">
+  <object id="7" name="e5" x="587" y="1510">
    <point/>
   </object>
   <object id="8" name="boss" x="1030" y="1500">
@@ -639,7 +639,7 @@
   <object id="10" name="key" x="511.286" y="953.281">
    <point/>
   </object>
-  <object id="12" name="e5" x="565.633" y="1313.73">
+  <object id="12" name="e4" x="200" y="1313.73">
    <point/>
   </object>
  </objectgroup>

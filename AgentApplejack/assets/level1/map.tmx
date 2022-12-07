@@ -230,16 +230,13 @@
   <object id="1" name="start" x="27.3833" y="624.721">
    <point/>
   </object>
-  <object id="2" name="e1" x="300" y="177">
+  <object id="2" name="e1" x="150" y="177">
    <point/>
   </object>
   <object id="3" name="e2" x="442" y="476">
    <point/>
   </object>
-  <object id="4" name="box1" x="399.583" y="529.52" visible="0">
-   <point/>
-  </object>
-  <object id="8" name="e3" x="869" y="690">
+  <object id="8" name="e3" x="900" y="690">
    <point/>
   </object>
   <object id="11" name="boss" x="937.095" y="428.356">
