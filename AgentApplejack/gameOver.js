@@ -21,12 +21,12 @@ class gameOver extends Phaser.Scene {
         this.background = this.add.image(gameWidth / 2, gameHeight / 2, 'background');
 
 
-        this.failed = this.add.image(gameWidth / 2, gameWidth / 2, 'title');
-        this.failed.setScale(1);
+        this.failed = this.add.image(gameWidth / 2, gameHeight / 2, 'failed');
+        this.failed.setScale(2);
         // this.title2 = this.add.image(gameWidth / 2, gameHeight / 2, 'tryagain');
         // this.title2.setScale(2);
         this.tryAgain = this.add.image(gameWidth/2, gameHeight - 60, 'tryagain')
-        // this.tryAgain.setScale(1.5);
+        this.tryAgain.setScale(1);
 
         this.time.addEvent({
             delay: 700,

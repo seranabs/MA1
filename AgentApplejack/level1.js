@@ -514,8 +514,6 @@ class level1 extends Phaser.Scene {
 
   // Reset inBox flag 
   this.inBox = false;
-
-
   
 } /////////////////// end of update //////////////////////////////
 
