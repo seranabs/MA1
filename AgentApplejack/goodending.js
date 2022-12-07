@@ -8,8 +8,10 @@ class goodending extends Phaser.Scene {
 
     preload () {
         this.load.image("background", "assets/level1/bg1.png");
+        this.load.image("success", "assets/success.png");
         // this.load.image("title", "assets/title-screen.png");
         this.load.image("tryagain", "assets/tryagain.png");
+        this.load.image("gameover", "assets/game-over.png");
     }
 
     create () {
@@ -18,14 +20,19 @@ class goodending extends Phaser.Scene {
         var gameWidth = 640;
         var gameHeight = 480;
 
-        this.background = this.add.image(gameWidth / 2, gameHeight / 2, 'background');
+        this.background = this.add.image(gameWidth / 2, 100, 'background');
 
 
-        this.title = this.add.image(gameWidth / 2, 80, 'title');
-        this.title.setScale(1);
+        this.success = this.add.image(gameWidth / 2, gameHeight + 20, 'success');
+        this.success.setScale(1.5);
+
+        this.gameover= this.add.image(gameWidth / 2, gameHeight / 2, 'gameover');
+        this.gameover.setScale(1.5);
+        // this.title = this.add.image(gameWidth / 2, 80, 'title');
+        // this.title.setScale(1);
         // this.title2 = this.add.image(gameWidth / 2, gameHeight / 2, 'tryagain');
         // this.title2.setScale(2);
-        this.tryAgain = this.add.image(gameWidth/2, gameHeight - 60, 'tryagain')
+        // this.tryAgain = this.add.image(gameWidth/2, gameHeight - 60, 'tryagain')
         // this.tryAgain.setScale(1.5);
 
         this.time.addEvent({
@@ -40,7 +47,6 @@ class goodending extends Phaser.Scene {
         var tryagainKey = this.input.keyboard.addKey('ENTER');
         
         tryagainKey.on('down', function(){
-        console.log("Tutorial");
         this.scene.start("level1");
         }, this )
 

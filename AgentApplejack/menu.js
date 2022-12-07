@@ -75,7 +75,7 @@ class menu extends Phaser.Scene {
         // this.title2.setScale(2);
 
 
-        this.pressEnter = this.add.image(gameWidth/2, gameHeight - 60, 'enter')
+        this.pressEnter = this.add.image(gameWidth - 200, gameHeight - 80, 'enter')
         this.pressEnter.setScale(1.5);
 
         this.time.addEvent({
