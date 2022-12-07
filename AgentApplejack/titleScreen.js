@@ -3,7 +3,7 @@ class titleScreen extends Phaser.Scene {
     constructor ()
     {
         super('titleScreen');
-        var music
+        var music;
         
     }
 
@@ -19,15 +19,14 @@ class titleScreen extends Phaser.Scene {
 
     create () {
         // let graphics = this.add.graphics();
+        this.background = this.add.image(gameWidth, gameHeight, 0, 0, 'background');
+        this.background.setOrigin(0,0);
 
         var gameWidth = 640;
         var gameHeight = 480;
 
         this.music = this.sound.add('music2',{loop: true,}).setVolume(0.2) // 10% volume
         this.music.play();
-
-        this.background = this.add.image(gameWidth, gameHeight, 0, 0, 'background');
-        this.background.setOrigin(0,0);
 
         this.title = this.add.image(gameWidth / 2, 80, 'title');
         this.title.setScale(1);
@@ -76,7 +75,6 @@ class titleScreen extends Phaser.Scene {
 
     update (){
         this.background.x  -= 0.05;
-        // middleground.tilePosition.x -= 0.2;
     }
 
 }////------end of world---------/////
