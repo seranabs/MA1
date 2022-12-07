@@ -63,9 +63,9 @@ class menu extends Phaser.Scene {
         // this.tut3 = this.add.image(gameWidth/2 - 50, gameHeight - 100, 'tut2')
         // this.tut3.setScale(1.5);
 
-        this.t1 = this.add.image(640 / 2, 480 / 2, 't1').setOrigin(.5, .5).setVisible(true);
-        this.t1.displayWidth = this.sys.canvas.width;
-        this.t1.displayHeight = this.sys.canvas.height;
+        // this.t1 = this.add.image(640 / 2, 480 / 2, 't1').setOrigin(.5, .5).setVisible(true);
+        // this.t1.displayWidth = this.sys.canvas.width;
+        // this.t1.displayHeight = this.sys.canvas.height;
 
         // this.title = this.add.image(gameWidth / 2, 80, 'title');
         // this.title.setScale(1);

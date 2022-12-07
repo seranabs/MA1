@@ -69,10 +69,7 @@ class titleScreen extends Phaser.Scene {
             this.pressEnter.alpha = 1;
         }
     }
-    
-    // music1() {
-    //     this.music1.loopFull(0.8);
-    // }
+
 
     update (){
         this.backgroundTitle.x  -= 0.05;
