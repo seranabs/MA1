@@ -105,6 +105,8 @@ class level2 extends Phaser.Scene {
       // var e2 = map.findObject("objectLayer",(obj) => obj.name === "e2");
       var e3 = map.findObject("objectLayer",(obj) => obj.name === "e3");
       var e4 = map.findObject("objectLayer",(obj) => obj.name === "e4");
+      var e5 = map.findObject("objectLayer",(obj) => obj.name === "e5");
+
 
       var cctv1 = map.findObject("objectLayer",(obj) => obj.name === "cctv1");
       var cctv2 = map.findObject("objectLayer",(obj) => obj.name === "cctv2");
@@ -245,6 +247,9 @@ class level2 extends Phaser.Scene {
 
       this.enemy4 = this.physics.add.sprite(e4.x, e4.y, 'enemy1').play("e1right");
       this.enemy4.body.setAllowGravity(false);
+
+      this.enemy5 = this.physics.add.sprite(e5.x, e5.y, 'enemy1').play("e1right");
+      this.enemy5.body.setAllowGravity(false);
 
       this.cctv1 = this.physics.add.sprite(cctv1.x, cctv1.y, 'enemy2');
       this.cctv1.body.setAllowGravity(false);
@@ -390,18 +395,36 @@ class level2 extends Phaser.Scene {
 
       this.time.addEvent({
         delay: 10000,
-        callback: this.moveRightLeft,
+        callback: this.moveRightLeft1,
+        callbackScope: this,
+        loop: false,
+      });
+      this.time.addEvent({
+        delay: 10000,
+        callback: this.moveRightLeft2,
+        callbackScope: this,
+        loop: false,
+      });
+      this.time.addEvent({
+        delay: 10000,
+        callback: this.moveRightLeft3,
+        callbackScope: this,
+        loop: false,
+      });
+      this.time.addEvent({
+        delay: 10000,
+        callback: this.moveRightLeft4,
         callbackScope: this,
         loop: false,
       });
 
     
-          this.time.addEvent({
-            delay: 10000,
-            callback: this.moveLeftRight,
-            callbackScope: this,
-            loop: false,
-        });
+        //   this.time.addEvent({
+        //     delay: 10000,
+        //     callback: this.moveLeftRight,
+        //     callbackScope: this,
+        //     loop: false,
+        // });
   
       // get the tileIndex number in json, +1
       //mathis.player.setTileIndexCallback(11, this.room1, this);
@@ -412,12 +435,7 @@ class level2 extends Phaser.Scene {
       //this.physics.add.collider(mathis.player, this.this.player);
   
       this.physics.add.overlap(
-        this.player,
-        [ this.e1,
-          this.e3,
-          this.e4,
-          this.e5
-        ],
+        this.player, [this.e1, this.e3, this.e4, this.e5],
         this.hitEnemy,
         null,
         this
@@ -588,46 +606,102 @@ class level2 extends Phaser.Scene {
   
     } /////////////////// end of update //////////////////////////////
 
-    moveRightLeft() {
+    moveRightLeft1() {
       // console.log("moveRightLeft");
       this.tweens.timeline({
-        targets: this.enemy1,
+        targets: this.e1,
         loop: -1, // loop forever
         ease: "Linear",
         duration: 3000,
         tweens: [
           {
-            x: +500,
+            x: 1000,
           },
           {
-            x: -299,
+            x: 0,
           },
         ],
       });
   }
+
+  moveRightLeft2() {
+    // console.log("moveRightLeft");
+    this.tweens.timeline({
+      targets: this.e3,
+      loop: -1, // loop forever
+      ease: "Linear",
+      duration: 3000,
+      tweens: [
+        {
+          x: 850,
+        },
+        {
+          x: 100,
+        },
+      ],
+    });
+}
+
+moveRightLeft3() {
+  // console.log("moveRightLeft");
+  this.tweens.timeline({
+    targets: this.e4,
+    loop: -1, // loop forever
+    ease: "Linear",
+    duration: 3000,
+    tweens: [
+      {
+        x: 700,
+      },
+      {
+        x: 550,
+      },
+    ],
+  });
+}
+
+moveRightLeft4() {
+  // console.log("moveRightLeft");
+  this.tweens.timeline({
+    targets: this.e5,
+    loop: -1, // loop forever
+    ease: "Linear",
+    duration: 3000,
+    tweens: [
+      {
+        x: 1000,
+      },
+      {
+        x: 300,
+      },
+    ],
+  });
+}
   
+    // moveLeftRight() {
+    //   // console.log("moveLeftRight");
+    //   this.tweens.timeline({
+    //     targets: this.enemy3,
+    //     loop: -1, // loop forever
+    //     ease: "Linear",
+    //     duration: 3000,
+    //     tweens: [
+    //       {
+    //         x: -620,
+    //       },
+    //       {
+    //         x: +870,
+    //       },
+    //     ],
+    //   });
+    // }
+
+
     allowClimb (sprite, tile) {
       // console.log('Allow Climb', tile);
       this.distance = Math.abs(this.player.x - (tile.pixelX + tile.width / 2));
       //console.log(this.player.x, tile.pixelX, this.distance);
       this.onLadder = true;
-    }
-    moveLeftRight() {
-      // console.log("moveLeftRight");
-      this.tweens.timeline({
-        targets: this.enemy3,
-        loop: -1, // loop forever
-        ease: "Linear",
-        duration: 3000,
-        tweens: [
-          {
-            x: -620,
-          },
-          {
-            x: +870,
-          },
-        ],
-      });
     }
     
     allowClimb (sprite, tile) {
@@ -644,7 +718,7 @@ class level2 extends Phaser.Scene {
       this.inBox = true;
     }
   
-    hitEnemy(player, enemy1) {
+    hitEnemy(player, enemy) {
       console.log('Ouchies!');
       //this.scene.pause();
       this.cameras.main.shake(100);
@@ -652,7 +726,7 @@ class level2 extends Phaser.Scene {
       // delay 1 sec
       this.life = this.life -1;
     
-      this.enemy1.disableBody(true, true);
+      enemy.disableBody(true, true);
           
       if (this.life < 1 )
       {  this.time.delayedCall(500,function() {

@@ -568,7 +568,7 @@ allowHide (sprite, object) {
   this.inBox = true;
 }
 
-hitEnemy(player, object) {
+hitEnemy(player, enemy) {
   console.log('Ouchies!');
   //this.scene.pause();
   this.cameras.main.shake(100);
@@ -576,7 +576,7 @@ hitEnemy(player, object) {
   // delay 1 sec
   this.life = this.life -1;
 
-  this.e1.disableBody(true, true);
+  enemy.disableBody(true, true);
     
   if (this.life < 1 )
   {  this.time.delayedCall(500,function() {
