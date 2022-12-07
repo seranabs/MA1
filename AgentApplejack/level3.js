@@ -24,10 +24,10 @@ class level3 extends Phaser.Scene {
   
      // Step 2 : Preload any images here
 
-      this.load.image("bgL31IMG", "assets/level3/DP/_PNG/background1.png")
-      this.load.image("bgL32IMG", "assets/level3/DP/_PNG/background2.png")
-      this.load.image("bgL33IMG", "assets/level3/DP/_PNG/3. background layer.png")
-      this.load.image("platformsIMG", "assets/level3/DP/_PNG/1. main platforms.png")
+      this.load.image("bgL31IMG", "assets/level3/background1.png")
+      this.load.image("bgL32IMG", "assets/level3/background2.png")
+      this.load.image("bgL33IMG", "assets/level3/backgroundlayer.png")
+      this.load.image("platformsIMG", "assets/level3/mainplatforms.png")
       this.load.image("tilesetIMG", "assets/level3/tileset.png")
       this.load.spritesheet('applejack', 'assets/spritesheet.png', { frameWidth: 64, frameHeight: 64 });
       this.load.image("box", "assets/box.png")
