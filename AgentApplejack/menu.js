@@ -11,7 +11,7 @@ class menu extends Phaser.Scene {
         this.load.image("background", "/assets/level1/bg1.png");
         this.load.image("title", "/assets/title-screen.png");
         this.load.image("enter", "/assets/press-enter-text.png");
-        // this.load.image("t1", "/assets/instructions/1.jpg");
+        this.load.image("title2", "/assets/instructions.png");
         this.load.image("tutorial", "/assets/tutorial.jpg");
         // this.load.image("t2", "/assets/2.jpg");
         // this.load.image("t3", "/assets/3.jpg");
@@ -29,7 +29,9 @@ class menu extends Phaser.Scene {
         var gameWidth = 640;
         var gameHeight = 480;
 
-        this.tutorial = this.add.image(gameWidth / 2, gameHeight / 2, '11').setOrigin(.5, .5).setVisible(true);
+        this.background = this.add.image(gameWidth / 2, gameHeight / 2, 'background');
+
+        // this.tutorial = this.add.image(gameWidth / 2, gameHeight / 2, '11').setOrigin(.5, .5).setVisible(true);
         // this.tutorial.displayWidth = this.sys.canvas.width;
         // this.tutorial.displayHeight = this.sys.canvas.height;
 
@@ -67,8 +69,8 @@ class menu extends Phaser.Scene {
 
         // this.title = this.add.image(gameWidth / 2, 80, 'title');
         // this.title.setScale(1);
-        // this.title2 = this.add.image(gameWidth / 2, gameHeight / 2, 'instructions');
-        // this.title2.setScale(2);
+        this.title2 = this.add.image(gameWidth / 2, gameHeight / 2, 'instructions');
+        this.title2.setScale(2);
 
 
         this.pressEnter = this.add.image(gameWidth/2, gameHeight - 60, 'enter')
@@ -116,7 +118,7 @@ class menu extends Phaser.Scene {
     // }
 
     update (){
-        // this.background.x  -= 0.05;
+        this.background.x  -= 0.05;
         // middleground.tilePosition.x -= 0.2;
 
         // if (space == 0) {
