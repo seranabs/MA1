@@ -363,32 +363,65 @@ class level3 extends Phaser.Scene {
 
       this.time.addEvent({
         delay: 3000,
-        callback: this.moveRightLeft,
+        callback: this.moveRightLeft1,
         callbackScope: this,
         loop: false,
       });
 
-    
+      this.time.addEvent({
+        delay: 3000,
+        callback: this.moveRightLeft2,
+        callbackScope: this,
+        loop: false,
+      });
+
+      this.time.addEvent({
+        delay: 3000,
+        callback: this.moveRightLeft3,
+        callbackScope: this,
+        loop: false,
+      });
+
+      this.time.addEvent({
+        delay: 3000,
+        callback: this.moveRightLeft4,
+        callbackScope: this,
+        loop: false,
+      });
+
+      this.time.addEvent({
+        delay: 3000,
+        callback: this.moveRightLeft5,
+        callbackScope: this,
+        loop: false,
+      });
+
        this.time.addEvent({
           delay: 3000,
-           callback: this.moveLeftRight,
+           callback: this.moveLeftRight1,
            callbackScope: this,
            loop: false,
        });
+
+       this.time.addEvent({
+        delay: 3000,
+         callback: this.moveLeftRight2,
+         callbackScope: this,
+         loop: false,
+     });
   
       // get the tileIndex number in json, +1
       //mathis.player.setTileIndexCallback(11, this.room1, this);
 
       this.physics.add.overlap(
-        this.player,
-        [ this.e1,
-          this.e2,
-          this.e3,
-          this.e4,
-          this.e5,
-          this.e6,
-          this.e7
-        ],
+        this.player,[this.enemy1, this.enemy2, this.enemy3, this.enemy4, this.enemy5, this.enemy6, this.enemy7],
+        this.hitEnemy,
+        null,
+        this
+      );
+
+      this.physics.add.overlap(
+        this.player,[this.cctv1, this.cctv2, this.cctv3],
         this.hitEnemy,
         null,
         this
@@ -636,7 +669,7 @@ moveRightLeft5() {
 }
 
 
-  moveLeftRight2() {
+  moveLeftRight1() {
     // console.log("moveLeftRight");
     this.tweens.timeline({
       targets: this.enemy2,
@@ -654,7 +687,7 @@ moveRightLeft5() {
     });
   }
 
-  oveLeftRight2() {
+  moveLeftRight2() {
     // console.log("moveLeftRight");
     this.tweens.timeline({
       targets: this.enemy7,

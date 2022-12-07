@@ -16,7 +16,7 @@
     },
     backgroundColor: '000000',
     pixelArt: true,
-    scene: [titleScreen, storyline, menu, level1, level2, level3, gameOver]
+    scene: [titleScreen, storyline, menu, level1, level2, level3, gameOver, gameOver2, gameOver3, goodending]
 };
 
 var game = new Phaser.Game(config);
