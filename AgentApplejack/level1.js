@@ -43,6 +43,8 @@ class level1 extends Phaser.Scene {
     this.load.spritesheet('enemy2', 'assets/spritesheet_enemy2.png', { frameWidth: 128, frameHeight: 128 });
     this.load.spritesheet('boss', 'assets/boss.png', { frameWidth: 33, frameHeight: 96 });
     this.load.spritesheet('key', 'assets/key.png', { frameWidth: 32, frameHeight: 32 });
+    this.load.audio('shoot', 'assets/shoot.mp3');
+
 
   }//////end of preload////////
 
@@ -56,6 +58,8 @@ class level1 extends Phaser.Scene {
     let map = this.make.tilemap({ key: "level1" });
 
     window.key = 0
+    this.shoot = this.sound.add('shoot',{loop: false}).setVolume(0.2) // 10% volume
+
     
 
     // this.i = 0;
@@ -611,6 +615,7 @@ killboss (player, boss) {
   if (window.key === 1) {
   console.log("Die!");
   window.boss ++
+  this.shoot.play();
   boss.disableBody(true, true);
   } else {
     this.cameras.main.shake(100);

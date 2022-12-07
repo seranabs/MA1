@@ -35,6 +35,8 @@ class level3 extends Phaser.Scene {
       this.load.spritesheet('enemy2', 'assets/spritesheet_enemy2.png', { frameWidth: 128, frameHeight: 128 });
       this.load.spritesheet('boss', 'assets/boss.png', { frameWidth: 33, frameHeight: 96 });
       this.load.spritesheet('key', 'assets/key.png', { frameWidth: 32, frameHeight: 32 });
+      this.load.audio('shoot', 'assets/shoot.mp3');
+
   
     }//////end of preload////////
   
@@ -47,6 +49,7 @@ class level3 extends Phaser.Scene {
       let map = this.make.tilemap({ key: "level3" });
 
       window.key = 0
+      this.shoot = this.sound.add('shoot',{loop: false}).setVolume(0.2) // 10% volume
   
       // Step 4 Load the game tiles
       // 1st parameter is name in Tiled,
@@ -750,6 +753,7 @@ moveRightLeft5() {
     if (window.key === 1) {
     console.log("Die!");
     window.key ++
+    this.shoot.play();
     boss.disableBody(true, true);
     } else {
       this.cameras.main.shake(100);
