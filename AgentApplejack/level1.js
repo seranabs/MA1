@@ -191,7 +191,7 @@ class level1 extends Phaser.Scene {
 
       this.enemy3 = this.physics.add.sprite(this.e3.x, this.e3.y, 'enemy1').play("e1left");
       this.enemy3.body.setAllowGravity(false);
-      
+
       this.boss = this.physics.add.sprite(this.boss.x, this.boss.y, 'boss').play("bossmove");
       this.boss.body.setAllowGravity(false);
 
@@ -294,12 +294,12 @@ class level1 extends Phaser.Scene {
           loop: false,
         });
 
-        this.time.addEvent({
-          delay: 5000,
-          callback: this.resetE1,
-          callbackScope: this,
-          loop: false,
-        });
+        // this.time.addEvent({
+        //   delay: 5000,
+        //   callback: this.resetE1,
+        //   callbackScope: this,
+        //   loop: false,
+        // });
 
         
        
