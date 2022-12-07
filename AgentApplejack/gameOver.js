@@ -8,7 +8,7 @@ class gameOver extends Phaser.Scene {
 
     preload () {
         this.load.image("background", "assets/level1/bg1.png");
-        // this.load.image("title", "assets/title-screen.png");
+        this.load.image("failed", "assets/failed.png");
         this.load.image("tryagain", "assets/tryagain.png");
     }
 
@@ -21,8 +21,8 @@ class gameOver extends Phaser.Scene {
         this.background = this.add.image(gameWidth / 2, gameHeight / 2, 'background');
 
 
-        this.title = this.add.image(gameWidth / 2, 80, 'title');
-        this.title.setScale(1);
+        this.failed = this.add.image(gameWidth / 2, gameWidth / 2, 'title');
+        this.failed.setScale(1);
         // this.title2 = this.add.image(gameWidth / 2, gameHeight / 2, 'tryagain');
         // this.title2.setScale(2);
         this.tryAgain = this.add.image(gameWidth/2, gameHeight - 60, 'tryagain')
