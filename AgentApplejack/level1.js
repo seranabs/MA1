@@ -319,13 +319,13 @@ class level1 extends Phaser.Scene {
       this
     );
 
-    this.physics.add.overlap(
-      this.player,
-      this.e2,
-      this.hitEnemy,
-      null,
-      this
-    );
+    // this.physics.add.overlap(
+    //   this.player,
+    //   this.e2,
+    //   this.hitEnemy,
+    //   null,
+    //   this
+    // );
 
 
 
