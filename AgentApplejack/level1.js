@@ -227,7 +227,7 @@ class level1 extends Phaser.Scene {
 
       this.buildingLayer.setCollisionByProperty({ wall: true });
       this.physics.add.collider(this.buildingLayer, this.player);
-      // this.physics.add.collider(this.player, this.enemy1, this.hitEnemy, null, this);
+      this.physics.add.collider(this.player, this.enemy1, this.hitEnemy, null, this);
  
      //  Our this.player animations, turning, walking left and walking right.
      this.anims.create({
