@@ -184,14 +184,14 @@ class level2 extends Phaser.Scene {
        this.anims.create({
         key: "e1right",
         frames: this.anims.generateFrameNumbers("enemy1", { start: 0, end: 11 }),
-        frameRate: 5,
+        frameRate: 7,
         repeat: -1,
       });
 
       this.anims.create({
         key: "e1left",
         frames: this.anims.generateFrameNumbers("enemy1", { start: 12, end: 23 }),
-        frameRate: 5,
+        frameRate: 7,
         repeat: -1,
       });
 
