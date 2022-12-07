@@ -24,7 +24,10 @@ class titleScreen extends Phaser.Scene {
         var gameWidth = 640;
         var gameHeight = 480;
 
-        this.backgroundTitle = this.add.image(gameWidth / 2, gameHeight / 2, 'backgroundTitle');
+        this.backgroundTitle = this.add.image(gameWidth / 2, gameHeight / 2, 'backgroundTitle').setOrigin(.5, .5).setVisible(true);
+        this.backgroundTitle.displayWidth = this.sys.canvas.width;
+        this.backgroundTitle.displayHeight = this.sys.canvas.height;
+    
 
         this.music = this.sound.add('music2',{loop: true,}).setVolume(0.2) // 10% volume
         this.music.play();
