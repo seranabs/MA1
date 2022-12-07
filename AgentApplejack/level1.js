@@ -7,7 +7,6 @@ class level1 extends Phaser.Scene {
     var ladder = false;
     var box = false
     var enemy2
-    var enemy1
     this.life = 1
     this.showenemy2 = false
     // var e1timer
@@ -149,14 +148,14 @@ class level1 extends Phaser.Scene {
         key: "e1right",
         frames: this.anims.generateFrameNumbers("enemy1", { start: 0, end: 11 }),
         frameRate: 5,
-        repeat: 2,
+        repeat: -1,
       });
 
       this.anims.create({
         key: "e1left",
         frames: this.anims.generateFrameNumbers("enemy1", { start: 12, end: 23 }),
         frameRate: 5,
-        repeat: 2,
+        repeat: -1,
       });
 
 
@@ -228,7 +227,7 @@ class level1 extends Phaser.Scene {
 
       this.buildingLayer.setCollisionByProperty({ wall: true });
       this.physics.add.collider(this.buildingLayer, this.player);
-      this.physics.add.collider(this.player, this.enemy1, this.hitEnemy, null, this);
+      // this.physics.add.collider(this.player, this.enemy1, this.hitEnemy, null, this);
  
      //  Our this.player animations, turning, walking left and walking right.
      this.anims.create({
@@ -308,6 +307,13 @@ class level1 extends Phaser.Scene {
     this.physics.add.overlap(
       this.player,
       this.e1,
+      this.hitEnemy,
+      null,
+      this
+    );
+
+    this.physics.add.overlap(
+      this.player,
       this.e3,
       this.hitEnemy,
       null,
@@ -321,7 +327,6 @@ class level1 extends Phaser.Scene {
       null,
       this
     );
-
 
 
     this.physics.add.overlap(
