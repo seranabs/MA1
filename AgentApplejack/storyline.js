@@ -1,4 +1,4 @@
-var space = 0;
+var enter = 0;
 
 // var windowWidth = window.innerWidth;
 // var windowHeight = window.innerHeight;
@@ -99,7 +99,7 @@ class storyline extends Phaser.Scene {
     // this.story11.create(680, , "5").setVisible(true);
    
 
-    // //press spacebar notice//
+    // //press enterbar notice//
     // this.start = this.add
     //   .image(800, 1100, "pressToContinue")
     //   .setScale(0.24)
@@ -113,21 +113,21 @@ class storyline extends Phaser.Scene {
       loop: true
     });
     //
-    //press spacebar and skip control//
-    var spaceDown = this.input.keyboard.addKey("SPACE");
+    //press enterbar and skip control//
     var enterDown = this.input.keyboard.addKey("ENTER");
-    spaceDown.on(
-      "down",
-      function () {
-        console.log("Spacebar pressed", space);
-        space = space + 1;
-      },
-      this
-    );
+    var spaceDown = this.input.keyboard.addKey("SPACE");
     enterDown.on(
       "down",
       function () {
-        space = 0;
+        console.log("enterbar pressed", enter);
+        enter = enter + 1;
+      },
+      this
+    );
+    spaceDown.on(
+      "down",
+      function () {
+        enter = 0;
         this.scene.stop("storyline");
         this.scene.start("menu");
       },
@@ -173,34 +173,34 @@ class storyline extends Phaser.Scene {
 
   update() {
 
-    if (space == 0) {
+    if (enter == 0) {
       null
-    } else if (space == 1) {
+    } else if (enter == 1) {
       this.story1.setVisible(false);
-    } else if (space == 2) {
+    } else if (enter == 2) {
     this.story2.setVisible(false);
-    } else if (space == 3) {
+    } else if (enter == 3) {
         this.story3.setVisible(false);
-    } else if (space == 4) {
+    } else if (enter == 4) {
         this.story4.setVisible(false);
-    } else if (space == 5) {
+    } else if (enter == 5) {
         this.story5.setVisible(false);
-    } else if (space == 6) {
+    } else if (enter == 6) {
         this.story6.setVisible(false);
-    } else if (space == 7) {
+    } else if (enter == 7) {
         this.story7.setVisible(false);
-    } else if (space == 8) {
+    } else if (enter == 8) {
         this.story8.setVisible(false);
-    } else if (space == 9) {
+    } else if (enter == 9) {
         this.story9.setVisible(false);
-    } else if (space == 10) {
+    } else if (enter == 10) {
         this.story10.setVisible(false);
-    } else if (space == 11) {
+    } else if (enter == 11) {
       this.story10.setVisible(false);
-  } else if (space == 12) {
+  } else if (enter == 12) {
     this.story11.setVisible(false);
-    } else if (space == 13) {
-      space = 0;
+    } else if (enter == 13) {
+      enter = 0;
       this.scene.stop("storyline");
       this.scene.start("menu");
     }
