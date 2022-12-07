@@ -29,8 +29,8 @@ class level2 extends Phaser.Scene {
       // this.load.image("propsIMG", "assets/Props-01.png")
       // this.load.image("bgpropsIMG", "assets/Background Props.png")
   
-      // this.load.image("backgroundL2", "/assets/level2/background.png", {frameWidth:1920,frameHeight:2112});
-      game.load.image("bgL2IMG", "/assets/level2/bg.png", {frameWidth:1920,frameHeight:2112});
+      game.load.image("backgroundL2", "/assets/level2/background.png", {frameWidth:1920,frameHeight:2112});
+      // game.load.image("bgL2IMG", "/assets/level2/bg.png", {frameWidth:1920,frameHeight:2112});
       this.load.image("buildingIMG", "assets/level2/tileset.png")
       this.load.image("sidebuildingIMG", "assets/level2/tileset2.png")
       this.load.image("xtrasIMG", "assets/level2/tileset3.png")
@@ -60,7 +60,7 @@ class level2 extends Phaser.Scene {
       //let buildingTiles = map.addTilesetImage("Buildings32x32", "building");
       //let streetTiles = map.addTilesetImage("Street32x32", "street");
   
-      let bgL2tiles = map.addTilesetImage("bglvl2", "bgL2IMG");
+      let bgL2tiles = map.addTilesetImage("bgL", "backgroundL2");
       let buildingtiles = map.addTilesetImage("building", "buildingIMG");
       let sidetiles = map.addTilesetImage("side", "sidebuildingIMG");
       let xtrastiles = map.addTilesetImage("xtras", "xtrasIMG");
