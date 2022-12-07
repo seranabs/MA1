@@ -761,6 +761,8 @@ moveRightLeft5() {
     console.log("goodending");
     this.scene.restart();
     this.scene.start("goodending");
+    } else {
+      this.scene.start("gameOver");
     }
   } 
 

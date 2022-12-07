@@ -32,7 +32,7 @@ class titleScreen extends Phaser.Scene {
 
         this.title = this.add.image(gameWidth / 2, gameHeight / 2, 'title');
         this.title.setScale(1);
-        this.pressEnter = this.add.image(gameWidth/2, gameHeight - 60, 'enter').setOrigin(0.5, 0.5);
+        this.pressEnter = this.add.image(gameWidth/2, gameHeight - 300, 'enter').setOrigin(0.5, 0.5);
         this.pressEnter.setScale(1.5);
 
         var enterKey = this.input.keyboard.addKey('ENTER');
