@@ -29,7 +29,7 @@ class level2 extends Phaser.Scene {
       // this.load.image("propsIMG", "assets/Props-01.png")
       // this.load.image("bgpropsIMG", "assets/Background Props.png")
   
-      game.load.image("backgroundL2", "/assets/level2/background.png", {frameWidth:1920,frameHeight:2112});
+      this.load.image("backgroundL2", "/assets/level2/background.png", {frameWidth:1920,frameHeight:2112});
       // game.load.image("bgL2IMG", "/assets/level2/bg.png", {frameWidth:1920,frameHeight:2112});
       this.load.image("buildingIMG", "assets/level2/tileset.png")
       this.load.image("sidebuildingIMG", "assets/level2/tileset2.png")
