@@ -6,8 +6,7 @@ class level1 extends Phaser.Scene {
 
     var ladder = false;
     var box = false
-    var enemy2
-    var enemy1
+    var enemy2]
     this.life = 1
     this.showenemy2 = false
     // var e1timer
@@ -557,7 +556,7 @@ allowHide (sprite, object) {
   this.inBox = true;
 }
 
-hitEnemy(player, object) {
+hitEnemy(player, enemy1) {
   console.log('Ouchies!');
   //this.scene.pause();
   this.cameras.main.shake(100);
