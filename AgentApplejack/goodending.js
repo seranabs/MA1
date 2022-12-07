@@ -1,8 +1,8 @@
-class gameOver extends Phaser.Scene {
+class goodending extends Phaser.Scene {
 
     constructor ()
     {
-        super('gameOver');
+        super('goodending');
         
     }
 

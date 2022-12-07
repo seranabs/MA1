@@ -758,7 +758,7 @@ moveRightLeft5() {
 
   goodending (player, boss) {
     if (window.boss === 3) {
-    console.log("Goodending");
+    console.log("goodending");
     this.scene.restart();
     this.scene.start("gameOver");
     }
