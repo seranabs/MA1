@@ -19,11 +19,13 @@ class titleScreen extends Phaser.Scene {
 
     create () {
         // let graphics = this.add.graphics();
-        this.background = this.add.image(gameWidth, gameHeight, 0, 0, 'background');
-        this.background.setOrigin(0,0);
+        
 
         var gameWidth = 640;
         var gameHeight = 480;
+
+        this.background = this.add.image(640 / 2, 480 / 2, 0, 0, 'background').setOrigin(.5, .5).setVisible(true);;
+        this.background.setOrigin(0,0);
 
         this.music = this.sound.add('music2',{loop: true,}).setVolume(0.2) // 10% volume
         this.music.play();
