@@ -7,6 +7,7 @@ class level1 extends Phaser.Scene {
     var ladder = false;
     var box = false
     var enemy2
+    var enemy1
     this.life = 1
     this.showenemy2 = false
     // var e1timer
@@ -304,7 +305,7 @@ class level1 extends Phaser.Scene {
 
     this.physics.add.overlap(
       this.player,
-      this.enemy1,
+      this.e1,
       this.hitEnemy,
       null,
       this
@@ -312,7 +313,7 @@ class level1 extends Phaser.Scene {
 
     this.physics.add.overlap(
       this.player,
-      this.enemy3,
+      this.e3,
       this.hitEnemy,
       null,
       this
@@ -556,7 +557,7 @@ allowHide (sprite, object) {
   this.inBox = true;
 }
 
-hitEnemy(player, enemy1) {
+hitEnemy(player, object) {
   console.log('Ouchies!');
   //this.scene.pause();
   this.cameras.main.shake(100);
@@ -564,7 +565,7 @@ hitEnemy(player, enemy1) {
   // delay 1 sec
   this.life = this.life -1;
 
-  this.enemy1.disableBody(true, true);
+  this.e1.disableBody(true, true);
     
   if (this.life < 1 )
   {  this.time.delayedCall(500,function() {
