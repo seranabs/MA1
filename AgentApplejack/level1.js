@@ -7,6 +7,7 @@ class level1 extends Phaser.Scene {
     var ladder = false;
     var box = false
     var enemy2
+    var enemy1
     this.life = 1
     this.showenemy2 = false
     // var e1timer
@@ -227,7 +228,7 @@ class level1 extends Phaser.Scene {
 
       this.buildingLayer.setCollisionByProperty({ wall: true });
       this.physics.add.collider(this.buildingLayer, this.player);
-      this.physics.add.collider(this.player, this.enemy1, this.hitEnemy, null, this);
+      // this.physics.add.collider(this.player, this.enemy1, this.hitEnemy, null, this);
  
      //  Our this.player animations, turning, walking left and walking right.
      this.anims.create({
@@ -312,21 +313,22 @@ class level1 extends Phaser.Scene {
       this
     );
 
-    // this.physics.add.overlap(
-    //   this.player,
-    //   this.e3,
-    //   this.hitEnemy,
-    //   null,
-    //   this
-    // );
+    this.physics.add.overlap(
+      this.player,
+      this.e3,
+      this.hitEnemy,
+      null,
+      this
+    );
 
-    // this.physics.add.overlap(
-    //   this.player,
-    //   this.e2,
-    //   this.hitEnemy,
-    //   null,
-    //   this
-    // );
+    this.physics.add.overlap(
+      this.player,
+      this.e2,
+      this.hitEnemy,
+      null,
+      this
+    );
+
 
 
     this.physics.add.overlap(
@@ -565,9 +567,7 @@ hitEnemy(player, object) {
   // delay 1 sec
   this.life = this.life -1;
 
-  this.e1.disableBody(true, true);
-  this.e2.disableBody(true, true);
-  this.e3.disableBody(true, true);
+  this.enemy1.disableBody(true, true);
     
   if (this.life < 1 )
   {  this.time.delayedCall(500,function() {
