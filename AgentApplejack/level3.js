@@ -255,7 +255,7 @@ class level3 extends Phaser.Scene {
       this.enemy1 = this.physics.add.sprite(e1.x, e1.y, 'enemy1').play("e1right");
       this.enemy1.body.setAllowGravity(false);
 
-      this.enemy2 = this.physics.add.sprite(e2.x, e2.y, 'enemy1').play("e1right");
+      this.enemy2 = this.physics.add.sprite(e2.x, e2.y, 'enemy1').play("e1left");
       this.enemy2.body.setAllowGravity(false);
 
       this.enemy3 = this.physics.add.sprite(e3.x, e3.y, 'enemy1').play("e1right");
@@ -270,7 +270,7 @@ class level3 extends Phaser.Scene {
       this.enemy6 = this.physics.add.sprite(e6.x, e6.y, 'enemy1').play("e1right");
       this.enemy6.body.setAllowGravity(false);
 
-      this.enemy7 = this.physics.add.sprite(e7.x, e7.y, 'enemy1').play("e1right");
+      this.enemy7 = this.physics.add.sprite(e7.x, e7.y, 'enemy1').play("e1left");
       this.enemy7.body.setAllowGravity(false);
 
       this.cctv1 = this.physics.add.sprite(cctv1.x, cctv1.y, 'enemy2');
@@ -428,6 +428,10 @@ class level3 extends Phaser.Scene {
   
     update() {
 
+      if (this.player.x > 1800 && this.player.y < 350 ) {
+        this.goodending();
+     }
+
       if (this.showcctv1){
         // console.log("I AM ON")
               this.cctv1.body.setOffset(-1000, -1000);
@@ -446,17 +450,6 @@ class level3 extends Phaser.Scene {
                   this.cctv3.enableBody(true, 305, 490, true, true);
             } 
     
-      if (this.hidefromenemy1){
-         console.log("I AM AWAY")
-               this.enemy1.body.setOffset(-500, -500);
-      } 
-
-      if (this.resetenemy1) {
-        console.log("I AM ON")
-        // this.enemy1.enableBody(true, this.e1.x, this.e1.y, true, true);
-        this.enemy1.body.setOffset(500, 500);
-      }
-
       if (this.onLadder) {
         //console.log('Gravity 0');
         this.player.setGravityY(0);
@@ -532,7 +525,7 @@ class level3 extends Phaser.Scene {
          this.player.body.setVelocityX(0);
          this.player.body.setVelocityY(0);
          this.player.anims.play('stand', true);
-         this.hidefromenemy1 = false;
+        //  this.hidefromenemy1 = false;
          // this.resetenemy1 = true;
         } 
 
@@ -552,7 +545,7 @@ class level3 extends Phaser.Scene {
   
     } /////////////////// end of update //////////////////////////////
   
-    moveRightLeft() {
+    moveRightLeft1() {
       // console.log("moveRightLeft");
       this.tweens.timeline({
         targets: this.enemy1,
@@ -561,17 +554,17 @@ class level3 extends Phaser.Scene {
         duration: 3000,
         tweens: [
           {
-            x: 500,
+            x: 600,
           },
           {
-            x: 299,
+            x: 175,
           },
         ],
       });
   }
 
-  moveLeftRight() {
-    // console.log("moveLeftRight");
+  moveRightLeft2() {
+    // console.log("moveRightLeft");
     this.tweens.timeline({
       targets: this.enemy3,
       loop: -1, // loop forever
@@ -579,14 +572,106 @@ class level3 extends Phaser.Scene {
       duration: 3000,
       tweens: [
         {
-          x: 620,
+          x: 1800,
         },
         {
-          x: 870,
+          x: 900,
+        },
+      ],
+    });
+}
+
+moveRightLeft3() {
+  // console.log("moveRightLeft");
+  this.tweens.timeline({
+    targets: this.enemy4,
+    loop: -1, // loop forever
+    ease: "Linear",
+    duration: 3000,
+    tweens: [
+      {
+        x: 800,
+      },
+      {
+        x: 0,
+      },
+    ],
+  });
+}
+
+moveRightLeft4() {
+  // console.log("moveRightLeft");
+  this.tweens.timeline({
+    targets: this.enemy5,
+    loop: -1, // loop forever
+    ease: "Linear",
+    duration: 3000,
+    tweens: [
+      {
+        y: 300,
+      },
+      {
+        y: 90,
+      },
+    ],
+  });
+}
+
+moveRightLeft5() {
+  // console.log("moveRightLeft");
+  this.tweens.timeline({
+    targets: this.enemy6,
+    loop: -1, // loop forever
+    ease: "Linear",
+    duration: 3000,
+    tweens: [
+      {
+        x: 1200,
+      },
+      {
+        x: 200,
+      },
+    ],
+  });
+}
+
+
+  moveLeftRight2() {
+    // console.log("moveLeftRight");
+    this.tweens.timeline({
+      targets: this.enemy2,
+      loop: -1, // loop forever
+      ease: "Linear",
+      duration: 3000,
+      tweens: [
+        {
+          x: 0,
+        },
+        {
+          x: 800,
         },
       ],
     });
   }
+
+  oveLeftRight2() {
+    // console.log("moveLeftRight");
+    this.tweens.timeline({
+      targets: this.enemy7,
+      loop: -1, // loop forever
+      ease: "Linear",
+      duration: 3000,
+      tweens: [
+        {
+          x: 1000,
+        },
+        {
+          x: 1500,
+        },
+      ],
+    });
+  }
+  
   
   allowClimb (sprite, tile) {
     // console.log('Allow Climb', tile);
@@ -631,12 +716,20 @@ class level3 extends Phaser.Scene {
   killboss (player, boss) {
     if (window.key === 1) {
     console.log("Die!");
-    window.boss = false;
+    window.key ++
     boss.disableBody(true, true);
     } else {
       this.cameras.main.shake(100);
     }
   }
+
+  goodending (player, boss) {
+    if (window.boss === 3) {
+    console.log("Goodending");
+    this.scene.restart();
+    this.scene.start("gameOver");
+    }
+  } 
 
 
   } //////////// end of class world ////////////////////////

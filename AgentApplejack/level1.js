@@ -14,6 +14,8 @@ class level1 extends Phaser.Scene {
     // this.hidefromenemy1 = false
     // this.resetenemy1 = false
     // Put global variable here
+    window.key = 0
+    window.boss = 0
     
   }
 
@@ -541,7 +543,7 @@ moveLeftRight() {
     targets: this.enemy3,
     loop: -1, // loop forever
     ease: "Linear",
-    duration: 3000,
+    duration: 8000,
     tweens: [
       {
         x: 400,
@@ -610,7 +612,7 @@ collectkey (player, key)
 killboss (player, boss) {
   if (window.key === 1) {
   console.log("Die!");
-  window.boss = false;
+  window.boss ++
   boss.disableBody(true, true);
   } else {
     this.cameras.main.shake(100);

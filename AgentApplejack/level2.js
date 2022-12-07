@@ -747,7 +747,7 @@ moveRightLeft4() {
     killboss (player, boss) {
       if (window.key === 1) {
       console.log("Die!");
-      window.boss = false;
+      window.key ++
       boss.disableBody(true, true);
       } else {
         this.cameras.main.shake(100);

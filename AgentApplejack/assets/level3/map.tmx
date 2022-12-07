@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="60" height="37" tilewidth="32" tileheight="32" infinite="0" nextlayerid="12" nextobjectid="20">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="60" height="37" tilewidth="32" tileheight="32" infinite="0" nextlayerid="12" nextobjectid="21">
  <editorsettings>
   <export target="map.tmj" format="json"/>
  </editorsettings>
@@ -2433,25 +2433,25 @@
   <object id="7" name="key2" x="1103.09" y="1080.16">
    <point/>
   </object>
-  <object id="2" name="e1" x="175.505" y="695.968">
+  <object id="2" name="e1" x="175" y="700">
    <point/>
   </object>
-  <object id="8" name="e2" x="1250" y="1030">
+  <object id="8" name="e2" x="1500" y="1030">
    <point/>
   </object>
-  <object id="12" name="e3" x="1185.27" y="540.326">
+  <object id="12" name="e3" x="900" y="570">
    <point/>
   </object>
-  <object id="13" name="e4" x="447.623" y="478.082">
+  <object id="13" name="e4" x="0" y="480">
    <point/>
   </object>
-  <object id="15" name="e5" x="688.651" y="248.974">
+  <object id="15" name="e5" x="800" y="90">
    <point/>
   </object>
-  <object id="16" name="e6" x="1014.44" y="243.676">
+  <object id="16" name="e6" x="200" y="250">
    <point/>
   </object>
-  <object id="19" name="e7" x="443.65" y="897.894">
+  <object id="19" name="e7" x="800" y="900">
    <point/>
   </object>
   <object id="9" name="cctv1" x="1170" y="930">
@@ -2463,7 +2463,7 @@
   <object id="14" name="cctv3" x="305" y="490">
    <point/>
   </object>
-  <object id="17" name="boss" x="1280.63" y="139.054">
+  <object id="17" name="boss" x="1240" y="140">
    <point/>
   </object>
  </objectgroup>

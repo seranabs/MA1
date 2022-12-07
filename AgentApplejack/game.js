@@ -18,6 +18,5 @@
     pixelArt: true,
     scene: [titleScreen, storyline, menu, level1, level2, level3, gameOver]
 };
+
 var game = new Phaser.Game(config);
-window.key = 0
-window.boss = true
