@@ -6,7 +6,7 @@ class level1 extends Phaser.Scene {
 
     var ladder = false;
     var box = false
-    var enemy2]
+    var enemy2
     this.life = 1
     this.showenemy2 = false
     // var e1timer
@@ -304,7 +304,7 @@ class level1 extends Phaser.Scene {
 
     this.physics.add.overlap(
       this.player,
-      this.e1,
+      this.enemy1,
       this.hitEnemy,
       null,
       this
@@ -312,7 +312,7 @@ class level1 extends Phaser.Scene {
 
     this.physics.add.overlap(
       this.player,
-      this.e3,
+      this.enemy3,
       this.hitEnemy,
       null,
       this
