@@ -12,7 +12,7 @@ class menu extends Phaser.Scene {
         this.load.image("title", "/assets/title-screen.png");
         this.load.image("enter", "/assets/press-enter-text.png");
         this.load.image("title2", "/assets/instructions.png");
-        this.load.image("tutorial", "/assets/tutorial.jpg");
+        // this.load.image("tutorial", "/assets/tutorial.jpg");
         // this.load.image("t2", "/assets/2.jpg");
         // this.load.image("t3", "/assets/3.jpg");
         // this.load.image("tut1", "/assets/tut1.png");
