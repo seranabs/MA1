@@ -732,7 +732,7 @@ moveRightLeft4() {
       {  this.time.delayedCall(500,function() {
       this.life = 1;
       this.scene.restart();
-      this.scene.start("gameOver");
+      this.scene.start("gameOver2");
       },[], this);
       } 
     }

@@ -734,7 +734,7 @@ moveRightLeft5() {
     {  this.time.delayedCall(500,function() {
     this.life = 1;
     this.scene.restart();
-    this.scene.start("gameOver");
+    this.scene.start("gameOver3");
     },[], this);
     } 
   }
@@ -760,7 +760,7 @@ moveRightLeft5() {
     if (window.boss === 3) {
     console.log("goodending");
     this.scene.restart();
-    this.scene.start("gameOver");
+    this.scene.start("goodending");
     }
   } 
 

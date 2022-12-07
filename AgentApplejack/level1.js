@@ -528,7 +528,7 @@ class level1 extends Phaser.Scene {
       duration: 10000,
       tweens: [
         {
-          x: 900,
+          x: 700,
         },
         {
           x: 150,
