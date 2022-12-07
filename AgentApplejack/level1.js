@@ -557,7 +557,7 @@ allowHide (sprite, object) {
   this.inBox = true;
 }
 
-hitEnemy(player, object) {
+hitEnemy(player, enemy1, enemy2, enemy3) {
   console.log('Ouchies!');
   //this.scene.pause();
   this.cameras.main.shake(100);
