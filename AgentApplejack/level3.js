@@ -362,49 +362,49 @@ class level3 extends Phaser.Scene {
       // Add time event / movement here
 
       this.time.addEvent({
-        delay: 3000,
+        delay: 5000,
         callback: this.moveRightLeft1,
         callbackScope: this,
         loop: false,
       });
 
       this.time.addEvent({
-        delay: 3000,
+        delay: 5000,
         callback: this.moveRightLeft2,
         callbackScope: this,
         loop: false,
       });
 
       this.time.addEvent({
-        delay: 3000,
+        delay: 5000,
         callback: this.moveRightLeft3,
         callbackScope: this,
         loop: false,
       });
 
       this.time.addEvent({
-        delay: 3000,
+        delay: 5000,
         callback: this.moveRightLeft4,
         callbackScope: this,
         loop: false,
       });
 
       this.time.addEvent({
-        delay: 3000,
+        delay: 5000,
         callback: this.moveRightLeft5,
         callbackScope: this,
         loop: false,
       });
 
        this.time.addEvent({
-          delay: 3000,
+          delay: 5000,
            callback: this.moveLeftRight1,
            callbackScope: this,
            loop: false,
        });
 
        this.time.addEvent({
-        delay: 3000,
+        delay: 6000,
          callback: this.moveLeftRight2,
          callbackScope: this,
          loop: false,

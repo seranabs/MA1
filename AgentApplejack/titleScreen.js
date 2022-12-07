@@ -30,8 +30,8 @@ class titleScreen extends Phaser.Scene {
         this.music = this.sound.add('music2',{loop: true,}).setVolume(0.2) // 10% volume
         this.music.play();
 
-        this.title = this.add.image(gameWidth / 2, 80, 'title');
-        this.title.setScale(1.5);
+        this.title = this.add.image(gameWidth / 2, gameHeight / 2, 'title');
+        this.title.setScale(1);
         this.pressEnter = this.add.image(gameWidth/2, gameHeight - 60, 'enter').setOrigin(0.5, 0.5);
         this.pressEnter.setScale(1.5);
 
