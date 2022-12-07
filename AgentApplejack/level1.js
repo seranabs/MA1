@@ -294,9 +294,7 @@ class level1 extends Phaser.Scene {
           loop: false,
         });
 
-        
-        
-       
+
     // get the tileIndex number in json, +1
     //this.player.setTileIndexCallback(11, this.room1, this);
 
