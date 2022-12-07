@@ -191,8 +191,7 @@ class level1 extends Phaser.Scene {
 
       this.enemy3 = this.physics.add.sprite(this.e3.x, this.e3.y, 'enemy1').play("e1left");
       this.enemy3.body.setAllowGravity(false);
-      this.enemy3.body.setOffset(500, 500);
-
+      
       this.boss = this.physics.add.sprite(this.boss.x, this.boss.y, 'boss').play("bossmove");
       this.boss.body.setAllowGravity(false);
 
@@ -372,11 +371,11 @@ class level1 extends Phaser.Scene {
       this.nextLevel();
    }
 
-   if (this.player.x > 380 && this.player.x < 400 && this.player.y < 210) {
-    this.offsetE1();
- } else {
-  this.resetE1();
- }
+//    if (this.player.x > 380 && this.player.x < 400 && this.player.y < 210) {
+//     this.offsetE1();
+//  } else {
+//   this.resetE1();
+//  }
 
     if (this.showenemy2){
     // console.log("I AM ON")
