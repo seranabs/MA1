@@ -306,27 +306,27 @@ class level1 extends Phaser.Scene {
 
     this.physics.add.overlap(
       this.player,
-      this.e1,
+      [this.e1, this.e2, this.e3],
       this.hitEnemy,
       null,
       this
     );
 
-    this.physics.add.overlap(
-      this.player,
-      this.e3,
-      this.hitEnemy,
-      null,
-      this
-    );
+    // this.physics.add.overlap(
+    //   this.player,
+    //   this.e3,
+    //   this.hitEnemy,
+    //   null,
+    //   this
+    // );
 
-    this.physics.add.overlap(
-      this.player,
-      this.e2,
-      this.hitEnemy,
-      null,
-      this
-    );
+    // this.physics.add.overlap(
+    //   this.player,
+    //   this.e2,
+    //   this.hitEnemy,
+    //   null,
+    //   this
+    // );
 
 
     this.physics.add.overlap(
@@ -557,7 +557,7 @@ allowHide (sprite, object) {
   this.inBox = true;
 }
 
-hitEnemy(player, enemy1, enemy2, enemy3) {
+hitEnemy(player, object) {
   console.log('Ouchies!');
   //this.scene.pause();
   this.cameras.main.shake(100);
@@ -565,9 +565,9 @@ hitEnemy(player, enemy1, enemy2, enemy3) {
   // delay 1 sec
   this.life = this.life -1;
 
-  this.enemy1.disableBody(true, true);
-  // this.enemy3.disableBody(true, true);
-  // this.enemy2.disableBody(true, true);
+  this.e1.disableBody(true, true);
+  this.e2.disableBody(true, true);
+  this.e3.disableBody(true, true);
     
   if (this.life < 1 )
   {  this.time.delayedCall(500,function() {
