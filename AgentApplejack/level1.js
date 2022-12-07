@@ -303,9 +303,10 @@ class level1 extends Phaser.Scene {
     // What will collider witg what layers
     //this.physics.add.collider(mathis.player, this.this.player);
 
+
     this.physics.add.overlap(
       this.player,
-      this.e1,
+      this.e2,
       this.hitEnemy,
       null,
       this
@@ -313,7 +314,7 @@ class level1 extends Phaser.Scene {
 
     this.physics.add.overlap(
       this.player,
-      this.e2,
+      this.e1,
       this.hitEnemy,
       null,
       this
@@ -407,7 +408,7 @@ class level1 extends Phaser.Scene {
     //   }
 
 
-      var toggle = [this.cursors.down.isDown && this.inBox == true]
+      // var toggle = [this.cursors.down.isDown && this.inBox == true]
 
      
       // if (toggle = true) {
