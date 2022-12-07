@@ -23,7 +23,7 @@ class goodending extends Phaser.Scene {
         this.background = this.add.image(gameWidth / 2, 100, 'background');
 
 
-        this.success = this.add.image(gameWidth / 2, gameHeight + 20, 'success');
+        this.success = this.add.image(gameWidth / 2, 100, 'success');
         this.success.setScale(1.5);
 
         this.gameover= this.add.image(gameWidth / 2, gameHeight / 2, 'gameover');
@@ -44,17 +44,11 @@ class goodending extends Phaser.Scene {
 
         this.state = 1;
 
-        var tryagainKey = this.input.keyboard.addKey('ENTER');
+        var enterDown = this.input.keyboard.addKey('ENTER');
         
-        tryagainKey.on('down', function(){
-        this.scene.start("level1");
-        }, this )
-
-        var spaceDown = this.input.keyboard.addKey('SPACE');
-        
-        spaceDown.on('down', function(){
+        enterDown.on('down', function(){
         console.log("Spacebar pressed, goto gameScene");
-        this.scene.start("level1");
+        this.scene.start("titleScreen");
         }, this );
     }////----------end of create----------/////
 
