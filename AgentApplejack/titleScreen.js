@@ -8,7 +8,7 @@ class titleScreen extends Phaser.Scene {
     }
 
     preload () {
-        this.load.image("background", "assets/level1/bg1.png");
+        this.load.image("backgroundTitle", "assets/level1/bg1.png");
         this.load.image("title", "assets/title-screen.png");
         this.load.image("enter", "assets/press-enter-text.png");
         this.load.image("instructions", "assets/instructions.png");
@@ -24,8 +24,7 @@ class titleScreen extends Phaser.Scene {
         var gameWidth = 640;
         var gameHeight = 480;
 
-        this.background = this.add.image(640 / 2, 480 / 2, 0, 0, 'background').setOrigin(.5, .5).setVisible(true);;
-        this.background.setOrigin(0,0);
+        this.backgroundTitle = this.add.image(gameWidth / 2, gameHeight / 2, 'backgroundTitle');
 
         this.music = this.sound.add('music2',{loop: true,}).setVolume(0.2) // 10% volume
         this.music.play();
@@ -76,7 +75,7 @@ class titleScreen extends Phaser.Scene {
     // }
 
     update (){
-        this.background.x  -= 0.05;
+        this.backgroundTitle.x  -= 0.05;
     }
 
 }////------end of world---------/////
