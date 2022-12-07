@@ -389,7 +389,7 @@ class level2 extends Phaser.Scene {
       // Add time event / movement here
 
       this.time.addEvent({
-        delay: 3000,
+        delay: 10000,
         callback: this.moveRightLeft,
         callbackScope: this,
         loop: false,
@@ -397,7 +397,7 @@ class level2 extends Phaser.Scene {
 
     
           this.time.addEvent({
-            delay: 3000,
+            delay: 10000,
             callback: this.moveLeftRight,
             callbackScope: this,
             loop: false,
@@ -597,10 +597,10 @@ class level2 extends Phaser.Scene {
         duration: 3000,
         tweens: [
           {
-            x: 500,
+            x: +500,
           },
           {
-            x: 299,
+            x: -299,
           },
         ],
       });
@@ -621,10 +621,10 @@ class level2 extends Phaser.Scene {
         duration: 3000,
         tweens: [
           {
-            x: 620,
+            x: -620,
           },
           {
-            x: 870,
+            x: +870,
           },
         ],
       });
