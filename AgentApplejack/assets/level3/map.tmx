@@ -4,16 +4,16 @@
   <export target="map.tmj" format="json"/>
  </editorsettings>
  <tileset firstgid="1" name="bg1" tilewidth="32" tileheight="32" tilecount="576" columns="32">
-  <image source="DP/_PNG/background1.png" width="1024" height="576"/>
+  <image source="background1.png" width="1024" height="576"/>
  </tileset>
  <tileset firstgid="577" name="bg2" tilewidth="32" tileheight="32" tilecount="576" columns="32">
-  <image source="DP/_PNG/background2.png" width="1024" height="576"/>
+  <image source="background2.png" width="1024" height="576"/>
  </tileset>
  <tileset firstgid="1153" name="bg3" tilewidth="32" tileheight="32" tilecount="1152" columns="36">
-  <image source="DP/_PNG/3. background layer.png" width="1152" height="1024"/>
+  <image source="backgroundlayer.png" width="1152" height="1024"/>
  </tileset>
  <tileset firstgid="2305" name="platforms" tilewidth="32" tileheight="32" tilecount="768" columns="32">
-  <image source="DP/_PNG/1. main platforms.png" width="1024" height="768"/>
+  <image source="mainplatforms.png" width="1024" height="768"/>
   <tile id="2">
    <properties>
     <property name="wall" type="bool" value="true"/>
