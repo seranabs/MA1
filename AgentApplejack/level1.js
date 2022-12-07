@@ -228,7 +228,7 @@ class level1 extends Phaser.Scene {
 
       this.buildingLayer.setCollisionByProperty({ wall: true });
       this.physics.add.collider(this.buildingLayer, this.player);
-      // this.physics.add.collider(this.player, this.enemy1, this.hitEnemy, null, this);
+      this.physics.add.collider(this.player, this.enemy1, this.hitEnemy, null, this);
  
      //  Our this.player animations, turning, walking left and walking right.
      this.anims.create({
@@ -294,13 +294,7 @@ class level1 extends Phaser.Scene {
           loop: false,
         });
 
-        // this.time.addEvent({
-        //   delay: 5000,
-        //   callback: this.resetE1,
-        //   callbackScope: this,
-        //   loop: false,
-        // });
-
+        
         
        
     // get the tileIndex number in json, +1
