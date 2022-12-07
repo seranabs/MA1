@@ -222,26 +222,6 @@ class level1 extends Phaser.Scene {
         } 
       }, this);
 
-      // var resete1right = this.enemy1.play("e1right");
-      
-      // resete1right.on('animationcomplete', (sprite) =>
-      // {
-      //   if (sprite.key === 'e1right')
-      //   { 
-      //     this.hidefromenemy1 = true;
-      //     this.enemy1.play("e1left");
-      //   }  else if (sprite.key === 'e1left')
-      //   {
-      //     this.hidefromenemy1 = false;
-      //     this.enemy1.play("e1right");
-      //   } 
-      // }, this);
-
-//       var enemy1trigger = this.enemy1.play("e1right");
-
-//       enemy1trigger.on('animationcomplete', (sprite) => {
-// this.hidefromenemy1 = true
-//       }, this);
 
     // Colliders
       //this.physics.add.collider(mathis.player, this.this.player);
@@ -404,20 +384,20 @@ class level1 extends Phaser.Scene {
           this.enemy2.enableBody(true, 442, 476, true, true);
     } 
 
-    if (this.hidefromenemy1){
-      console.log("I AM AWAY")
-            this.enemy1.body.setOffset(-500, -500);
-      } 
-    //   else {
+    // if (this.hidefromenemy1){
+    //   console.log("I AM AWAY")
+    //         this.enemy1.body.setOffset(-500, -500);
+    //   } 
+    // //   else {
+    // //     this.enemy1.enableBody(true, this.e1.x, this.e1.y, true, true);
+    // //   }
+      
+    //   if (this.resetenemy1) {
+    //     console.log("I AM ON")
+    //     // this.enemy1.enableBody(true, this.e1.x, this.e1.y, true, true);
+    //     this.enemy1.body.setOffset( this.e1.x, this.e1.y);
     //     this.enemy1.enableBody(true, this.e1.x, this.e1.y, true, true);
     //   }
-      
-      if (this.resetenemy1) {
-        console.log("I AM ON")
-        // this.enemy1.enableBody(true, this.e1.x, this.e1.y, true, true);
-        this.enemy1.body.setOffset( this.e1.x, this.e1.y);
-        this.enemy1.enableBody(true, this.e1.x, this.e1.y, true, true);
-      }
 
 
       var toggle = [this.cursors.down.isDown && this.inBox == true]
@@ -505,8 +485,6 @@ class level1 extends Phaser.Scene {
      this.player.body.setVelocityX(0);
      this.player.body.setVelocityY(0);
      this.showenemy2 = false;
-     
-    //  this.hidefromenemy1 = true;
     } else if (this.inBox) {
       console.log('Im standing in the Box, Show enemy false');
       this.player.body.setVelocityX(0);
@@ -599,18 +577,18 @@ hitEnemy(player, enemy1) {
   } 
 }
 
-offsetE1 (enemy1) {
-  console.log("offsetE1")
-  this.enemy1.body.setOffset(500, 500);
-  // this.resete1again.destroy, this.resete1again);
-}
+// offsetE1 (enemy1) {
+//   console.log("offsetE1")
+//   this.enemy1.body.setOffset(500, 500);
+//   // this.resete1again.destroy, this.resete1again);
+// }
 
 
-resetE1 (enemy1) {
-    console.log("resetE1")
-    this.enemy1.body.setOffset(-500, -500);
-    // this.resete1again.destroy, this.resete1again);
-  }
+// resetE1 (enemy1) {
+//     console.log("resetE1")
+//     this.enemy1.body.setOffset(-500, -500);
+//     // this.resete1again.destroy, this.resete1again);
+//   }
 
 
 collectkey (player, key)
