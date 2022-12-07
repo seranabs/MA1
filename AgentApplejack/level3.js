@@ -455,7 +455,7 @@ class level3 extends Phaser.Scene {
           
         spaceDown.on('down', function(){
         console.log("Spacebar pressed, goto level3");
-        this.scene.start("gameOver");
+        this.scene.start("goodending");
         }, this );
     } /////////////////// end of create //////////////////////////////
   
