@@ -1,8 +1,8 @@
-class gameOver extends Phaser.Scene {
+class gameOver2 extends Phaser.Scene {
 
     constructor ()
     {
-        super('gameOver');
+        super('gameOver2');
         
     }
 
@@ -41,7 +41,7 @@ class gameOver extends Phaser.Scene {
         
         tryagainKey.on('down', function(){
         console.log("Tutorial");
-        this.scene.start("level1");
+        this.scene.start("level2");
         }, this )
 
         var spaceDown = this.input.keyboard.addKey('SPACE');
