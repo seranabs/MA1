@@ -566,8 +566,8 @@ hitEnemy(player, enemy1, enemy2, enemy3) {
   this.life = this.life -1;
 
   this.enemy1.disableBody(true, true);
-  this.enemy3.disableBody(true, true);
-  this.enemy2.disableBody(true, true);
+  // this.enemy3.disableBody(true, true);
+  // this.enemy2.disableBody(true, true);
     
   if (this.life < 1 )
   {  this.time.delayedCall(500,function() {
